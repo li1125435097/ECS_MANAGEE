@@ -13,7 +13,7 @@ const option = {
 }
 
 async function main(){
-    let result = await exec('cd 1/ && ls var',option)
+    let result = await exec('ls',option)
     l(result)
 }
 main()
@@ -29,8 +29,8 @@ function exec(order,option){
             conn.exec(order, (err, stream) => {
                 if (err) reject(err);
                 stream.on('close', (code, signal) => {conn.end()})
-                stream.on('data', (data) => {resolve({data:data.toString(),msg:'std'})})
-                stream.stderr.on('data', (data) => {resolve({data:data.toString(),msg:'stderr'})})
+                stream.on('data', (data) => {resolve(data,'std')})
+                stream.stderr.on('data', (data) => {resolve(data,'stderr')})
             })
         })
     })

@@ -9,4 +9,5 @@ module.exports = {
     filename: 'app.min.js',
     path: path.resolve(__dirname, 'dist'),
   },
+
 };
