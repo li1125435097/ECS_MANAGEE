@@ -1,0 +1,28 @@
+{
+  "name": "ecs_managee",
+  "version": "1.0.0",
+  "description": "hello , i am documentation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon src/app.js",
+    "start": "npx nodemon dist/app.min.js",
+    "bs": "npx webpack && npx nodemon dist/app.min.js",
+    "build": "npx webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/li1125435097/ECS_MANAGEE.git"
+  },
+  "keywords": ["ssh","deploy","manage","nodejs"],
+  "author": "李金科",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/li1125435097/ECS_MANAGEE/issues"
+  },
+  "homepage": "https://github.com/li1125435097/ECS_MANAGEE#readme",
+  "devDependencies": {
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2"
+  }
+}
